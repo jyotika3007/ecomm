@@ -1,0 +1,1 @@
+// Copy script from firebase

@@ -1,0 +1,20 @@
+npx create-react-app amz
+
+Use firebase ( MongoDB - optional)
+
+
+Packages : 
+1. firebase-tools
+2. @mui/icons-material
+3. react-scripts
+4. @mui/material @emotion/react @emotion/styled
+
+
+///////////////////////////////////////////////////
+Node JS
+
+Install ES7 React in VS Code
+Format on save
+//////////////////////////////////////////////
+Material UI Icons
+
