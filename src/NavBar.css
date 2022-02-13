@@ -1,0 +1,37 @@
+.home__nav{
+	background-color: #232f3e;
+    color: #fff;
+    font-weight: 500;
+    display: flex;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    padding: 5px 5px 7px;
+}
+
+.home__nav .home__navList{
+	list-style-type: none;
+    float: left;
+}
+
+.home__nav .home__navList li{
+	float: left;
+	color: #fff;
+    padding: 3px 12px;
+    font-size: smaller;
+    text-decoration: none;
+    border: 1.25px solid #232f3e;
+    border-radius: 2px;
+}
+
+.home__nav .home__navList li:hover{
+	border: 1.25px solid #fff;
+	border-radius: 2px;
+	cursor: pointer;
+}
+.home__nav .home__navList .home__navMenu{
+    color: #fff;
+    margin-top: -3px;
+    margin-bottom: -7px;
+}
+

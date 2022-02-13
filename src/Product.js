@@ -1,22 +1,24 @@
 import React from "react";
-import StarRateIcon from "@mui/icons-material/StarRate";
+import StarRateIcon from '@mui/icons-material/StarRate';
 import "./Product.css";
 
-function Product() {
+function Product({ item_key, title, price, image, rating }) {
   return (
     <div className="product">
       <div className="product__info">
-        <p>The product info</p>
+        <p>{title}</p>
         <p className="product__price">
           <small>$</small>
-          <strong>11.99</strong>
+          <strong>{price}</strong>
         </p>
         <div className="product__rating">
-          <StarRateIcon className="product__ratingStar" />
+          {Array(rating).fill().map((_,i)=>(
+            <StarRateIcon className="product__ratingStar" key={item_key+i}/>
+          ))}          
         </div>
       </div>
       <img
-        src="https://m.media-amazon.com/images/I/7120GgUKj3L._AC_SX466_.jpg"
+        src={image}
         alt=""
         className="product__img"
       />

@@ -5,11 +5,11 @@
     margin: auto;
 }
 
+/*.home_container{
 
-.home_container{
+}*/
 
-}
-.home__row{
+.home__row {
     display: flex;
     z-index: 1;
     margin-left: 5px;
@@ -19,6 +19,28 @@
 .home_image{
     width: 100%;
     z-index: -1;
-    margin-bottom: -150px;
+    margin-bottom: -300px;
     mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
+}
+
+.home__tagline{
+    background-color: #fff;
+    padding: 10px 10px;
+    width: 100%;
+    text-align: center;
+    z-index: 1;
+    font-weight: normal;
+    margin: 10px;
+}
+
+.home__rowSlideProduct{
+
+    background-color: #fff;
+    margin: 5px 15px;
+    flex: none !important;
+}
+
+.home__rowSlideProduct .home__rowHeading{
+    width: 100%;
+   padding: 10px;
 }
