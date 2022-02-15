@@ -3,10 +3,16 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import reducer , { initialState } from './reducer';
+import StateProvider from './StateProvider';
 
 ReactDOM.render(
   <React.StrictMode>
+{/* Wrap our app in a Provider which help to access dataLayer in all components */}
+  <StateProvider initialState={initialState} reducer={reducer}>
+    {/* reducer cause the add values to dataLayer */}
     <App />
+  </StateProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

@@ -3,24 +3,43 @@ import React from 'react';
 import './Header.css';
 import SearchIcon from '@mui/icons-material/Search';
 import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
+import { Link } from 'react-router-dom';
+import { useStateValue } from './StateProvider'
+import { auth } from './firebase';
 
 function Header(){
+
+    const [{basket, user}, dispatch] = useStateValue();
+
+    console.log(user)
+
+    const handleAuthentication = () =>{
+        if(user){
+            auth.signOut();
+        }
+    }
+
+
     return(
         <div className="header">
+        <Link to="/">
             <img src="/amazon_logo.png" className="header_logo" />
+            </Link>
             <div className="header_search">
                 <input type="text" className="header_searchInput" />
                 <SearchIcon className="header_searchIcon" />
             </div>
             <div className="header_nav">
-                <div className="header_option">
-                    <span className="header_optionLineOne">
-                        Hello Guest
-                    </span>
-                    <span className="header_optionLineTwo">
-                        Sign In
-                    </span>
-                </div>
+                <Link to={!user && '/login'}>
+                    <div onClick={handleAuthentication} className="header_option">
+                        <span className="header_optionLineOne">
+                            Hello {user?user.email:'Guest'}
+                        </span>
+                        <span className="header_optionLineTwo">
+                            { user? 'Sign Out': 'Sign In'}
+                        </span>
+                    </div>
+                </Link>
                 <div className="header_option">
                     <span className="header_optionLineOne">
                         Return
@@ -37,11 +56,18 @@ function Header(){
                         Prime
                     </span>
                 </div>
+
+                <Link to="/checkout">
                 <div className="header_optionBasket">
                 <ShoppingBasketIcon className='header_optionBasketIcon'/>
                 
-                <span className="header_optionLineTwo header_basketCount">0</span>
+                <span className="header_optionLineTwo header_basketCount">
+
+                {basket?.length}
+
+                </span>
             </div>
+            </Link>
             </div>
             
         </div>

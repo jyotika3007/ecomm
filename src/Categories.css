@@ -1,0 +1,34 @@
+
+.category{
+    display: flex;
+    flex-direction: column;
+    /*align-items: center;*/
+    justify-content: flex-end;
+    margin: 10px;
+    /*padding: 20px;*/
+    padding: 15px;
+    width: 100%;
+    max-height: 400px;
+    min-width: 100px;
+    background-color: #fff;
+    z-index: 1;
+    /*overflow: hidden;*/
+}
+
+.category__info{
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+/*.category__img{
+    max-height: 325px; 
+    height: 250px;
+    width: none;
+    margin-bottom: 15px;
+    display: flex;
+}
+*/
+.category a, .category a:link, .category a:visited {
+    text-decoration: none;
+    color: #007185;
+}

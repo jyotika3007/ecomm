@@ -1,13 +1,14 @@
 .home{
     display: flex;
-    max-width: 1440px;
+    max-width: 1240px;
     justify-content: center;
     margin: auto;
 }
 
-/*.home_container{
-
-}*/
+.home_container{
+margin: 0;
+overflow: hidden;
+}
 
 .home__row {
     display: flex;

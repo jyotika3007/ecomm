@@ -1,5 +1,4 @@
 import React from "react";
-import StarRateIcon from '@mui/icons-material/StarRate';
 import "./NavBar.css";
 import MenuIcon from '@mui/icons-material/Menu';
 

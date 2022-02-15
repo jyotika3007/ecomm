@@ -1,8 +1,30 @@
 import React from "react";
 import StarRateIcon from '@mui/icons-material/StarRate';
 import "./Product.css";
+import { useStateValue } from './StateProvider';
 
-function Product({ item_key, title, price, image, rating }) {
+function Product({ id, title, price, image, rating }) {
+  
+  // Here despatch means how we manipulate the data
+  const [basket, dispatch] = useStateValue();
+
+  console.log("This is the basket")
+
+  const addToBasket = ()=>{
+    // Dispatch item into dataLayer
+    dispatch({
+      type: 'ADD_TO_BASKET',
+      item: {
+        id: id,
+        title: title,
+        image: image,
+        price: price,
+        rating: rating
+      }
+    })
+  }
+
+
   return (
     <div className="product">
       <div className="product__info">
@@ -13,7 +35,7 @@ function Product({ item_key, title, price, image, rating }) {
         </p>
         <div className="product__rating">
           {Array(rating).fill().map((_,i)=>(
-            <StarRateIcon className="product__ratingStar" key={item_key+i}/>
+            <StarRateIcon className="product__ratingStar" key={id+i}/>
           ))}          
         </div>
       </div>
@@ -22,7 +44,7 @@ function Product({ item_key, title, price, image, rating }) {
         alt=""
         className="product__img"
       />
-      <button>Add To Basket</button>
+      <button onClick={addToBasket} >Add To Basket</button>
     </div>
   );
 }
