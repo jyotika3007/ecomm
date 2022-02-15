@@ -2,11 +2,12 @@ import React from "react";
 import StarRateIcon from '@mui/icons-material/StarRate';
 import "./Product.css";
 import { useStateValue } from './StateProvider';
+import { auth } from './firebase';
 
 function Product({ id, title, price, image, rating }) {
   
   // Here despatch means how we manipulate the data
-  const [basket, dispatch] = useStateValue();
+  const [{basket, user}, dispatch] = useStateValue();
 
   console.log("This is the basket")
 

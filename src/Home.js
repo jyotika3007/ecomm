@@ -26,29 +26,29 @@ function Home(){
                     {/* Row 1 */}
 
                     <div className='home__row'>
-                        <Product id="1111" title="OnePlus Buds Z2 True Wireless Earbud Headphones-Touch Control with Charging Case" price={101.53} image="https://images-na.ssl-images-amazon.com/images/I/51UK5KJM+VL._AC_UL160_SR160,160_.jpg" rating={2} />
-                        <Product id="3111" title="OnePlus Buds Z2 True Wireless Earbud Headphones-Touch Control with Charging Case" price={101.53} image="https://images-na.ssl-images-amazon.com/images/I/611YaIo9DYL._AC_UL160_SR160,160_.jpg" rating={2} />
-                        <Product id="2111" title="OnePlus Buds Z2 True Wireless Earbud Headphones-Touch Control with Charging Case" price={101.53} image="https://images-na.ssl-images-amazon.com/images/I/61nyAhwVK8L._AC_UL160_SR160,160_.jpg" rating={2} />
-                        <Product id="4111" title="OnePlus 8 Glacial Green,​ 5G Unlocked Android Smartphone U.S Version, 8GB RAM+128GB Storage" price={1001.53} image="https://m.media-amazon.com/images/I/51uEwkqjZTL._AC_SX679_.jpg" rating={4} />
+                        <Product id="1111" title="OnePlus Nord True Wireless Earbud Headphones-Touch Control with Charging Case" price={995.53} image="https://images-na.ssl-images-amazon.com/images/I/51UK5KJM+VL._AC_UL160_SR160,160_.jpg" rating={2} />
+                        <Product id="3111" title="OnePlus 9 True Wireless Earbud Headphones-Touch Control with Charging Case" price={850.53} image="https://images-na.ssl-images-amazon.com/images/I/611YaIo9DYL._AC_UL160_SR160,160_.jpg" rating={5} />
+                        <Product id="2111" title="OnePlus 10 Glacial Green,​ 5G Unlocked Android Smartphone U.S Version" price={999.53} image="https://images-na.ssl-images-amazon.com/images/I/61nyAhwVK8L._AC_UL160_SR160,160_.jpg" rating={3} />
+                        <Product id="4111" title="OnePlus 8 Glacial Green,​ 5G Unlocked Android Smartphone U.S Version" price={1001.53} image="https://m.media-amazon.com/images/I/51uEwkqjZTL._AC_SX679_.jpg" rating={4} />
                     </div>
 
 
                     {/* Row 2 */}
 
-                    <div className=' home__rowSlideProduct'>
-                        <div className="home__rowHeading">
+                    {/*<div className='home__rowSlideProduct'>*/}
+                    <div className='home__row home__rowSlideProduct'>
+                        {/*<div className="home__rowHeading">
                             <h2>Popular Products in Women's Clothing </h2>
-                        </div>
+                        </div>*/}
                         <br />
-                        <div className="home__row">
-                            <ProductSlide image="https://m.media-amazon.com/images/I/61pqkgeQKmL._AC_UL320_.jpg" />
-                            <ProductSlide image="https://m.media-amazon.com/images/I/71hwiN0YWLL._MCnd_AC_UL320_.jpg" />
-                            <ProductSlide image="https://m.media-amazon.com/images/I/71tOqSpSShL._MCnd_AC_UL320_.jpg" />
-                            <ProductSlide image="https://m.media-amazon.com/images/I/71Baq7E2tML._MCnd_AC_UL320_.jpg" />
-                            <ProductSlide image="https://m.media-amazon.com/images/I/719spZ0T2XL._AC_UL320_.jpg" />
-                            <ProductSlide image="https://m.media-amazon.com/images/I/615pGP-cPsL._MCnd_AC_UL320_.jpg" />
-                            <ProductSlide image="https://m.media-amazon.com/images/I/719spZ0T2XL._AC_UL320_.jpg" />
-                        </div>
+                        {/*<div className="home__row">*/}
+                            <Product id="12345" title="Women Trouser with black shade" image="https://m.media-amazon.com/images/I/61pqkgeQKmL._AC_UL320_.jpg" price={102.09} rating={4} />
+                            <Product id="34567" title="Below knees dress for in/out" image="https://m.media-amazon.com/images/I/71tOqSpSShL._MCnd_AC_UL320_.jpg" price={122.09} rating={3} />
+                            <Product id="45678" title="Women Trouser with black shade" image="https://m.media-amazon.com/images/I/71Baq7E2tML._MCnd_AC_UL320_.jpg" price={96.09} rating={5} />
+                            <Product id="23412" title="Women Trouser with black shade" image="https://m.media-amazon.com/images/I/71hwiN0YWLL._MCnd_AC_UL320_.jpg" price={150.09} rating={4} />
+                            <Product id="23482" title="Women Trouser with black shade" image="https://m.media-amazon.com/images/I/719spZ0T2XL._AC_UL320_.jpg" price={85.09} rating={3} />
+                            <Product id="56712" title="Women Trouser with black shade" image="https://m.media-amazon.com/images/I/615pGP-cPsL._MCnd_AC_UL320_.jpg" price={112.09} rating={4} />
+                        {/*</div>*/}
                     </div>
 
                     

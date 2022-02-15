@@ -1,9 +1,12 @@
 .checkout{
 	display: flex;
-	background-color: #fff;
 	padding: 20px;
 	height: max-content;
-
+}
+.checkout__left{
+	background-color: #fff;
+	margin-right: 15px;
+	border-radius: 3px;
 }
 
 
@@ -17,4 +20,8 @@
 	margin-right: 10px;
 	padding: 10px;
 	border-bottom: 1px solid lightgray;
+}
+.checkout__left > h3{
+	padding: 0 12px;
+	font-weight: bold
 }
