@@ -1,7 +1,7 @@
 import React from 'react';
 import './CheckoutProduct.css';
 import StarRateIcon from '@mui/icons-material/StarRate';
-import { useStateValue } from './StateProvider';
+import { useStateValue } from '../StateProvider';
 
 function CheckoutProduct({ id, title, image, price, rating }) {
 

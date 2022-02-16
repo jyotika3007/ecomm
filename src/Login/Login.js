@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Login.css';
 import { Link, useHistory } from 'react-router-dom';
-import {auth} from './firebase';
+import {auth} from '../Firebase/firebase';
 
 function Login(argument) {
 
@@ -22,22 +22,6 @@ function Login(argument) {
 			.catch(err => alert(err.message))
 
 		// Some fancy firebase login stuff here !!!
-	}
-
-	const register = (e) => {
-		e.preventDefault();
-
-		auth
-			.createUserWithEmailAndPassword(email,password)
-			.then((user)=>{
-				console.log(user)
-				if(user){
-					history.push('/')
-				}
-			})
-			.catch(err => alert(err.message))
-
-		// some fancy firebase register stuff here !!!
 	}
 
 	return (
@@ -65,8 +49,9 @@ function Login(argument) {
 					By signing-in you agree to AMAZON FAKE CLONE Conditions of Use & Sale. Please see our Privacy Notice, our Cookies Notice and our Tnteres-Based Ads Notice.
 				</p>
 
-				<button onClick={register} className="login__registerButton">Create your Amazon account</button>
-			
+				<Link to="/register">
+				<button className="login__registerButton">Create your Amazon account</button>
+				</Link>
 			</div>
 
 		</div>

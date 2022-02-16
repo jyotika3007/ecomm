@@ -1,10 +1,11 @@
 import { render } from '@testing-library/react';
 import React from 'react';
-import './Home.css';
-import NavBar from './NavBar'
-import Product from './Product';
-import ProductSlide from './ProductSlide';
-import Categories from './Categories'
+import '../Home/Home.css';
+import NavBar from '../NavBar/NavBar';
+import Product from '../Product/Product';
+import ProductSlide from '../ProductSlide/ProductSlide';
+import Categories from '../Categories/Categories';
+import { Link } from 'react-router-dom';
 
 function Home(){
     return(
@@ -16,11 +17,13 @@ function Home(){
                     <img src="https://m.media-amazon.com/images/I/6138dCMwqPL._SX3000_.jpg" alt="BG Image" className='home_image' />
             
 
+                    
                     <div className='home__row'>
                         <h4 className="home__tagline">
-                            You are on amazon.com. You can also shop on Amazon India for millions of products with fast local delivery. <a href="/" target="_blank">Click here to go to amazon.in</a>
+                            You are on amazon.com. You can also shop on Amazon India for millions of products with fast local delivery. <Link to="/">Click here to go to amazon-clone</Link>
                         </h4>
                     </div>
+                    
 
 
                     {/* Row 1 */}

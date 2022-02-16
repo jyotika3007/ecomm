@@ -1,0 +1,31 @@
+.recentlyViewed{
+	margin-top: 15px;
+    background-color: #fff;
+    border-radius: 3px;
+    padding: 20px;
+    border: 1px solid lightgray;
+}
+.recentlyViewed .product{
+
+	margin: 10px auto !important;
+	padding: 0 !important;
+}
+.recentlyViewed h4{
+	/*margin-bottom: 10px;*/
+	border-bottom: 1px solid lightgray;
+
+}
+.recentlyViewed p{
+	font-size: 12px;
+	font-weight: 500;
+}
+.recentlyViewed .product__ratingStar{
+	font-size: 12px;
+}
+.recentlyViewed .product__info {
+	height: 80px;
+	margin-bottom: 2px ;
+}
+.recentlyViewed .product__img {
+	max-height: 75px;
+}

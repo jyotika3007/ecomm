@@ -1,8 +1,8 @@
 import React from "react";
 import StarRateIcon from '@mui/icons-material/StarRate';
 import "./Product.css";
-import { useStateValue } from './StateProvider';
-import { auth } from './firebase';
+import { useStateValue } from '../StateProvider';
+import { auth } from '../Firebase/firebase';
 
 function Product({ id, title, price, image, rating }) {
   
