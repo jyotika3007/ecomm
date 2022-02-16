@@ -6,10 +6,10 @@ import Checkout from './Checkout/Checkout';
 import Login from './Login/Login';
 import Register from './Register/Register';
 import Footer from './Footer/Footer';
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import Payment from './Payment/Payment';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { auth } from './Firebase/firebase';
 import { useStateValue } from './StateProvider';
-
 
 function App(){
 
@@ -46,9 +46,17 @@ function App(){
 		    		<Route path="/login">
 					    <Login />
 				    </Route>
+
 				    <Route path="/register">
 					    <Register />
 				    </Route>
+
+				    <Route path="/payment">
+					    <Header />
+					    <Payment />
+					    <Footer />
+				    </Route>
+		    		
 		    		<Route path="/checkout">
 					    <Header />
 					    <Checkout />

@@ -36,3 +36,9 @@
     margin-bottom: -7px;
 }
 
+@media screen and (max-width: 768px){
+    .home__nav{
+        display: none;
+    }
+}
+

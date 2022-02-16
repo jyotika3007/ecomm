@@ -8,8 +8,9 @@ function Product({ id, title, price, image, rating }) {
   
   // Here despatch means how we manipulate the data
   const [{basket, user}, dispatch] = useStateValue();
+  let audio = new Audio("/notify/Notification.mp3");
 
-  console.log("This is the basket")
+  // console.log("This is the basket")
 
   const addToBasket = ()=>{
     // Dispatch item into dataLayer
@@ -22,7 +23,9 @@ function Product({ id, title, price, image, rating }) {
         price: price,
         rating: rating
       }
-    })
+    });
+
+    audio.play();
   }
 
 

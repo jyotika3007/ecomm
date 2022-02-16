@@ -1,0 +1,28 @@
+.minicart{
+	    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 3px;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+    margin-bottom: 2px;
+    transition: visibility 0s linear 0.33s, opacity 0.33s linear;
+}	
+
+.minicart img{
+	height: 35px;
+    width: auto !important;
+    margin-right: 5px;
+}
+
+.minicart p{
+	font-size: 12px !important;
+}
+
+.minicart__close{ 
+	font-size: 15px !important;
+}
+
+.minicart__trash{
+	font-size: 15px !important;
+}

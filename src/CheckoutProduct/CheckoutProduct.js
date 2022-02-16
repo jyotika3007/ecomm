@@ -5,11 +5,11 @@ import { useStateValue } from '../StateProvider';
 
 function CheckoutProduct({ id, title, image, price, rating }) {
 
+	const audio = new Audio('/notify/Delete.mp3')
+
 	const [{basket}, dispatch] = useStateValue();
 
 	const removeFromBasket = ()=>{
-
-		console.log(id)
 
 		//  remove an item from the basket
 		dispatch({
@@ -17,11 +17,13 @@ function CheckoutProduct({ id, title, image, price, rating }) {
 			id: id
 		})
 
+		audio.play();
+
 	}
 
 
 	return (
-		<div className="checkoutProduct">
+		<div className="checkoutProduct" key={id}>
 			<img className="checkoutProduct__image" src={image} alt=""/>
 
 			<div className="checkoutProduct__info">
@@ -33,7 +35,7 @@ function CheckoutProduct({ id, title, image, price, rating }) {
 
 				<div className="checkoutProduct__rating">
 					{Array(rating).fill().map((_,i)=> (
-							<StarRateIcon className="checkoutProduct__ratingstar" key={id} />
+							<StarRateIcon className="checkoutProduct__ratingstar" key={i} />
 						))}
 				</div>
 

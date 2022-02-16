@@ -6,26 +6,51 @@ import Product from '../Product/Product';
 import ProductSlide from '../ProductSlide/ProductSlide';
 import Categories from '../Categories/Categories';
 import { Link } from 'react-router-dom';
+import { Carousel } from 'react-responsive-carousel';
+import { useStateValue } from '../StateProvider';
+import MiniCart from '../MiniCart/MiniCart';
 
+ 
 function Home(){
+
+    const [{ basket, user }, dispatch] = useStateValue();
+    const basketLength = basket?.length
+    let miniCart;
+
+    if(basket && basketLength>0){
+        miniCart = basket.map((item) => (
+                    <MiniCart
+                    id={item.id}
+                    title={item.title}
+                    image={item.image}
+                />
+                ))
+    }
+    else{
+        miniCart = <></>
+    }
+    
+
     return(
         <div className='home'>
             <div className='home_container'>
 
                 <NavBar />
 
-                    <img src="https://m.media-amazon.com/images/I/6138dCMwqPL._SX3000_.jpg" alt="BG Image" className='home_image' />
-            
 
-                    
+                <div className="home__miniCart">
+                        {miniCart}
+                </div>
+
+
+                    <img src="https://m.media-amazon.com/images/I/6138dCMwqPL._SX3000_.jpg" alt="BG Image" className='home_image' />
+                                
                     <div className='home__row'>
                         <h4 className="home__tagline">
                             You are on amazon.com. You can also shop on Amazon India for millions of products with fast local delivery. <Link to="/">Click here to go to amazon-clone</Link>
                         </h4>
                     </div>
                     
-
-
                     {/* Row 1 */}
 
                     <div className='home__row'>

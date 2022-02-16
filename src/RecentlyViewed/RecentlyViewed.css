@@ -10,6 +10,13 @@
 	margin: 10px auto !important;
 	padding: 0 !important;
 }
+
+
+.recentlyViewed .product:hover{
+    box-shadow: none !important;
+}
+
+
 .recentlyViewed h4{
 	/*margin-bottom: 10px;*/
 	border-bottom: 1px solid lightgray;

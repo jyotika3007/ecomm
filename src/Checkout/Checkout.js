@@ -5,6 +5,7 @@ import CheckoutProduct from '../CheckoutProduct/CheckoutProduct.js';
 import { useStateValue } from '../StateProvider';
 import RecentlyViewed from '../RecentlyViewed/RecentlyViewed';
 import { Link } from 'react-router-dom';
+import FlipMove from 'react-flip-move';
 
 function Checkout(argument) {
 	
@@ -34,10 +35,10 @@ function Checkout(argument) {
 
 				<h2 className="checkout__title"> Your Shopping Basket </h2>
 
-				{emptyCart}
-				
-				{ basket.map((item) => (
+				{emptyCart}				
 
+				{ basket.map((item) => (
+			
 				<CheckoutProduct
 					id={item.id}
 					title={item.title}
@@ -46,18 +47,13 @@ function Checkout(argument) {
 					rating={item.rating}
 				 />
 
-
-					)) }
-
+				)) }
 
 			</div>
 
-			<div className="checkout__right">
-				
+			<div className="checkout__right">				
 				<Subtotal />
-
 				<RecentlyViewed />
-
 			</div>
 		</div>
 		)

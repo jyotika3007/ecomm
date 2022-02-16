@@ -21,7 +21,16 @@ overflow: hidden;
     width: 100%;
     z-index: -1;
     margin-bottom: -300px;
-    mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0)) !important;
+}
+
+.home_carousel_image{
+    width: 100%;
+    /*position: absolute;*/
+    top: 0;
+    z-index: -1;
+    margin-bottom: -300px;
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0)) !important;
 }
 
 .home__tagline{
@@ -44,4 +53,23 @@ overflow: hidden;
 .home__rowSlideProduct .home__rowHeading{
     width: 100%;
    padding: 10px;
+}
+
+.home__miniCart{
+    position: fixed;
+    z-index: 2;
+    max-width: 200px;
+    right: 1%;
+    margin-top: 41px;
+}
+
+@media screen and (max-width: 768px){
+
+    .home__row{
+        flex-direction: column-reverse !important;
+    }
+
+    .home_image{
+        margin-bottom: -115px !important;
+    }
 }

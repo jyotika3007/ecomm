@@ -1,6 +1,88 @@
 .footer{
-	background-color: #000;
-	display: flex;
-	height: 50px;
+	/*background-color: #000;*/
+    background-color: #232f3e;
+	/*display: flex;*/
+	height: fit-content;
 	width: 100%;
+}
+
+.footer__backToTop{
+	display: flex;
+    flex-direction: row;
+    /*width: 100%;*/
+    justify-content: center;
+    background-color: #37475A;
+    padding: 5px;
+    font-weight: 600;
+}
+
+.footer__backToTop  a{
+    color: #fff;
+}
+
+.footer__links{
+    padding: 5% ;
+    border-bottom: 1px solid lightgray;
+}
+.footer__linksList{
+    display: flex;
+    justify-content: center;
+}
+
+.footer__linksList ul{
+    margin: 0!important;
+    padding: 0!important;
+}
+
+.footer__linksList ul li{
+    list-style-type: none;
+    color: #DDD;
+    font-size: 13px;
+margin-bottom: 10px;
+font-weight: 500;
+}
+
+.footer__linksListHeading{
+    color: #fff;
+    font-size: 17px !important;
+    font-weight: 700!important;
+    margin-bottom: 20px !important;
+    margin-top: 25px;
+}
+
+.footer_bottomLogo{
+    height: 30px;
+}
+
+.footer__bottom{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.footer__bottom .footer__bottomLinks{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+.footer__bottom .footer__bottomLinks ul {
+    list-style-type: none;
+}
+.footer__bottom .footer__bottomLinks ul li  {
+    float: left;
+    padding: 0 10px;
+    font-size: 12px; 
+    margin-top: -12px;
+    font-weight: bold;
+}
+
+
+@media screen and (max-width: 768px){
+    .footer__linksList{
+        flex-direction: column;
+    }
 }
