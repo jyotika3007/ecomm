@@ -23,6 +23,7 @@ function Home(){
                     id={item.id}
                     title={item.title}
                     image={item.image}
+                    price={item.price}
                 />
                 ))
     }
@@ -95,7 +96,7 @@ function Home(){
 
                     {/* Row 4 */}
                     
-                    <div className='home__row'>
+                    <div className='home__row home__singleSlideProduct'>
                         <Product id="8" title="SAMSUNG 65-Inch Class Crystal UHD AU8000 Series - 4K UHD HDR Smart TV with Alexa Built-in (UN65AU8000FXZA, 2021 Model), Black" price={999.99} image="https://m.media-amazon.com/images/I/71LJJrKbezL._AC_SX679_.jpg" rating={5}/>
                     </div>
             </div>

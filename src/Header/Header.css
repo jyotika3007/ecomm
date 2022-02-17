@@ -75,3 +75,22 @@
     margin-left: 10px;
     margin-right: 10px;
 }
+
+.header__navMenu{
+    color: #fff;
+    border: 1px solid lightgray;
+    border-radius: 2px;
+    margin-right: 5px;
+    margin-left: 5px;
+    display: none !important;
+}
+
+
+@media screen and (max-width: 768px){
+    .header_nav{
+        display: none;
+    }
+    .header__navMenu{
+        display: block !important;
+    }
+}

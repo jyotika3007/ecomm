@@ -6,6 +6,7 @@ import Checkout from './Checkout/Checkout';
 import Login from './Login/Login';
 import Register from './Register/Register';
 import Footer from './Footer/Footer';
+import ProductDetail from './ProductDetail/ProductDetail';
 import Payment from './Payment/Payment';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { auth } from './Firebase/firebase';
@@ -54,6 +55,12 @@ function App(){
 				    <Route path="/payment">
 					    <Header />
 					    <Payment />
+					    <Footer />
+				    </Route>
+		    		
+				    <Route path="/product-detail">
+					    <Header />
+					    <ProductDetail />
 					    <Footer />
 				    </Route>
 		    		

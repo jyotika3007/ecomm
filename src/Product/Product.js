@@ -3,6 +3,7 @@ import StarRateIcon from '@mui/icons-material/StarRate';
 import "./Product.css";
 import { useStateValue } from '../StateProvider';
 import { auth } from '../Firebase/firebase';
+import { Link } from 'react-router-dom';
 
 function Product({ id, title, price, image, rating }) {
   
@@ -31,6 +32,7 @@ function Product({ id, title, price, image, rating }) {
 
   return (
     <div className="product">
+        <Link to="/product-detail">
       <div className="product__info">
         <p>{title}</p>
         <p className="product__price">
@@ -48,6 +50,7 @@ function Product({ id, title, price, image, rating }) {
         alt=""
         className="product__img"
       />
+      </Link>
       <button onClick={addToBasket} >Add To Basket</button>
     </div>
   );

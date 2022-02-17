@@ -6,8 +6,8 @@
 }
 
 .home_container{
-margin: 0;
-overflow: hidden;
+    margin: 0;
+    overflow: hidden;
 }
 
 .home__row {
@@ -44,15 +44,19 @@ overflow: hidden;
 }
 
 .home__rowSlideProduct{
-
     background-color: #fff;
     margin: 5px 15px;
     flex: none !important;
 }
 
+.home__rowSlideProduct .product{
+    margin: 1px !important;
+}
+
+
 .home__rowSlideProduct .home__rowHeading{
     width: 100%;
-   padding: 10px;
+    padding: 10px;
 }
 
 .home__miniCart{
@@ -61,6 +65,10 @@ overflow: hidden;
     max-width: 200px;
     right: 1%;
     margin-top: 41px;
+}
+
+.home__singleSlideProduct .product{
+    width: 100% !important;
 }
 
 @media screen and (max-width: 768px){
@@ -72,4 +80,12 @@ overflow: hidden;
     .home_image{
         margin-bottom: -115px !important;
     }
+    .home__singleSlideProduct .product {
+        width: auto !important;
+    }
+    
+    .home__tagline{
+        width: auto !important;
+    }
+
 }

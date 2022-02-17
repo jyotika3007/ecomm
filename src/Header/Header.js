@@ -5,6 +5,7 @@ import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
 import { Link } from 'react-router-dom';
 import { useStateValue } from '../StateProvider'
 import { auth } from '../Firebase/firebase';
+import MenuIcon from '@mui/icons-material/Menu';
 
 function Header(){
 
@@ -57,16 +58,20 @@ function Header(){
                 </div>
 
                 <Link to="/checkout">
-                <div className="header_optionBasket">
-                <ShoppingBasketIcon className='header_optionBasketIcon'/>
-                
-                <span className="header_optionLineTwo header_basketCount">
+                    <div className="header_optionBasket">
+                        <ShoppingBasketIcon className='header_optionBasketIcon'/>
+                    
+                        <span className="header_optionLineTwo header_basketCount">
 
-                {basket?.length}
+                            {basket?.length}
 
-                </span>
+                        </span>
+                    </div>
+           
+                 </Link>
             </div>
-            </Link>
+             <div className="header__mobileNav">
+                <MenuIcon className="header__navMenu"/>
             </div>
             
         </div>
